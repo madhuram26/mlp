@@ -6,7 +6,7 @@ from src.logger import logging
 from sklearn.model_selection import train_test_split #this split the data in train and test
 from dataclasses import dataclass # if you want a class just to store some data, this is the module to go
 
-from src.components.data_transormation import DataTransforamtion
+from src.components.data_transormation import DataTransformation
 from src.components.data_transormation import DataTransormationConfig
 from src.components.model_trainer import ModelTrainerConfig
 from src.components.model_trainer import ModelTrainer
@@ -59,7 +59,7 @@ if __name__ == "__main__":
     obj = DataIngestion()
     train_data, test_data = obj.initiate_data_ingestion()
 
-    data_transformation = DataTransforamtion()
+    data_transformation = DataTransformation()
     train_arr,test_arr,_ = data_transformation.initiate_data_transformation(train_data,test_data)
     
     model_trainer = ModelTrainer()
